@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use Mojo::UserAgent;
 use feature qw(say);
-use 5.010;
+use 5.016; # for Mojolicious
 
 my $requested_station = $ARGV[0];
 
