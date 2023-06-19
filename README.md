@@ -17,7 +17,11 @@ carton exec -- ./somafm-currently-playing.pl station >> check_out_later.txt
 
 ## Installation
 
-TODO
+There is not proper installation at this time. The application is a single script, which can be executed using [carton](https://metacpan.org/pod/Carton).
+
+```bash
+carton exec -- ./somafm-currently-playing.pl <station>
+```
 
 ## Description
 
@@ -38,8 +42,10 @@ TODO
 ## Dependencies
 
 - Mojolicious
-- Perl 5.10
+- Perl 5.16.0 or higher
 - OpenSSL
+
+Please see `cpanfile` for a complete list of dependencies.
 
 ## Bugs and Limitations
 
@@ -69,7 +75,7 @@ Perl has pretty strong scraping capabilities and especially when using Mojolicio
 
 ## License and Copyright
 
-Copyright Jonas Brømsø (jonasbn) 2022
+Copyright Jonas Brømsø (jonasbn) 2022-2023
 
 MIT License, see separate `LICENSE` file
 
