@@ -1,3 +1,3 @@
 requires 'Mojolicious';
 requires 'perl', '5.016';
-requires 'IO::Socket::SSL', '2.009';
+requires 'IO::Socket::SSL', '2.083';
