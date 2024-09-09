@@ -4,15 +4,24 @@ A basic webscraper to fetch the currently playing track from a specified [SomaFM
 
 ## Usage
 
-Fetch the currently playing track from the specified [SomaFM] station
+Fetch the currently playing track from the specified [SomaFM] station.
 
 ```bash
 carton exec ./somafm-currently-playing.pl dronezone
 "Innesti + Jacob Newman" playing "Windslept" from album: "Spoke of Several"
 ```
 
+Saving the currently playing track to a file.
+
 ```bash
-carton exec -- ./somafm-currently-playing.pl station >> check_out_later.txt
+carton exec -- ./somafm-currently-playing.pl dronezone >> check_out_later.txt
+```
+
+Both getting the currently playing track and saving it to a file
+
+```bash
+carton exec -- ./somafm-currently-playing.pl dronezone | tee -a check_out_later.txt
+"Innesti + Jacob Newman" playing "Windslept" from album: "Spoke of Several"
 ```
 
 ## Installation

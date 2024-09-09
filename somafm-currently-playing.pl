@@ -5,6 +5,9 @@ use strict;
 use Mojo::UserAgent;
 use feature qw(say);
 use 5.016; # for Mojolicious
+use utf8;
+
+binmode(STDOUT, ":encoding(UTF-8)");
 
 my $requested_station = $ARGV[0];
 
