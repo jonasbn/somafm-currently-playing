@@ -88,7 +88,7 @@ If you want to dig more into the topic of Mojolicious client, I can point to the
 
 ## License and Copyright
 
-Copyright Jonas Brømsø (jonasbn) 2022-2023
+Copyright Jonas Brømsø (jonasbn) 2022-2024
 
 MIT License, see separate `LICENSE` file
 
