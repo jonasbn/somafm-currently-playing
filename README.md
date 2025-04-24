@@ -34,7 +34,42 @@ carton exec -- ./somafm-currently-playing.pl <station>
 
 ## Description
 
-TODO
+I have created a small helper/wrapper script: `soma-bookmark.sh` which can be used to bookmark the currently playing track in [SomaFM] using the `somafm-currently-playing.pl` command line tool.
+
+This is was a convenience wrapper, but it has now been extended with use of: `nowplaying-cli` which is a simple tool to get information from iTunes on what is playing.
+
+An example could look as follows using: `nowplaying-cli get-raw`:
+
+```shell
+nowplaying-cli get-raw
+{
+    kMRMediaRemoteNowPlayingInfoArtist = "Soma FM: Drone Zone";
+    kMRMediaRemoteNowPlayingInfoContentItemIdentifier = "-1371487966800194009";
+    kMRMediaRemoteNowPlayingInfoDuration = "67102.302";
+    kMRMediaRemoteNowPlayingInfoElapsedTime = "10469.392";
+    kMRMediaRemoteNowPlayingInfoIsMusicApp = 1;
+    kMRMediaRemoteNowPlayingInfoMediaType = MRMediaRemoteMediaTypeMusic;
+    kMRMediaRemoteNowPlayingInfoPlaybackRate = 0;
+    kMRMediaRemoteNowPlayingInfoQueueIndex = 0;
+    kMRMediaRemoteNowPlayingInfoRepeatMode = 1;
+    kMRMediaRemoteNowPlayingInfoShuffleMode = 1;
+    kMRMediaRemoteNowPlayingInfoTimestamp = "2025-04-22 08:01:48 +0000";
+    kMRMediaRemoteNowPlayingInfoTitle = "Drone Zone: Atmospheric ambient space music. Serve Best Chilled. Safe with most medications. [SomaFM]";
+    kMRMediaRemoteNowPlayingInfoTotalQueueCount = 0;
+    kMRMediaRemoteNowPlayingInfoTotalTrackCount = 0;
+    kMRMediaRemoteNowPlayingInfoTrackNumber = 0;
+    kMRMediaRemoteNowPlayingInfoUniqueIdentifier = "-1371487966800194009";
+}
+```
+
+And with additional parameters as: `nowplaying-cli get artist`:
+
+```shell
+nowplaying-cli get artist
+Soma FM: Drone Zone
+```
+
+This is highly experimental and I am not sure if I will keep it, also because it is macOS specific.
 
 ## Diagnostics
 
@@ -81,6 +116,7 @@ Perl has pretty strong scraping capabilities and especially when using Mojolicio
 - [Mojolicious Cookbook: "Web-scraping"](https://docs.mojolicious.org/Mojolicious/Guides/Cookbook#Web-scraping)
 - [Mojolicious: Mojo::DOM::CSS](https://docs.mojolicious.org/Mojo/DOM/CSS)
 - [dev.to: "Scraping Google Scholar with Perl and Mojo"](https://dev.to/raigaurav/scrapping-google-scholar-with-perl-and-mojo-4neg) by Gaurav Rai, served as good example
+- [Homebrew: nowplaying-cli][Hpmebrew]
 
 If you want to dig more into the topic of Mojolicious client, I can point to the following book:
 
@@ -88,8 +124,9 @@ If you want to dig more into the topic of Mojolicious client, I can point to the
 
 ## License and Copyright
 
-Copyright Jonas Brømsø (jonasbn) 2022-2024
+Copyright Jonas Brømsø (jonasbn) 2022-2025
 
 MIT License, see separate `LICENSE` file
 
 [SomaFM]: https://somafm.com/
+[Homebrew]: https://formulae.brew.sh/formula/nowplaying-cli#default
