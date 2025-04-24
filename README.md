@@ -116,7 +116,7 @@ Perl has pretty strong scraping capabilities and especially when using Mojolicio
 - [Mojolicious Cookbook: "Web-scraping"](https://docs.mojolicious.org/Mojolicious/Guides/Cookbook#Web-scraping)
 - [Mojolicious: Mojo::DOM::CSS](https://docs.mojolicious.org/Mojo/DOM/CSS)
 - [dev.to: "Scraping Google Scholar with Perl and Mojo"](https://dev.to/raigaurav/scrapping-google-scholar-with-perl-and-mojo-4neg) by Gaurav Rai, served as good example
-- [Homebrew: nowplaying-cli][Hpmebrew]
+- [Homebrew: nowplaying-cli][Homebrew]
 
 If you want to dig more into the topic of Mojolicious client, I can point to the following book:
 
